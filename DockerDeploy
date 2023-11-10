@@ -2,8 +2,8 @@ FROM mcr.microsoft.com/dotnet/aspnet:5.0
 
 ENV ASPNETCORE_URLS http://+:80
 
-COPY /output /App
-
 WORKDIR "/app"
+
+COPY . .
 
 ENTRYPOINT ["dotnet", "sample-app.dll"]
